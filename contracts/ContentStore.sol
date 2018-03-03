@@ -1,6 +1,6 @@
 pragma solidity ^0.4.19;
 
-contract ContetStore {
+contract ContentStore {
   mapping (address => string) public previewContents;
   mapping (address => string) private mainContents;
   mapping (address => uint) private funds;
@@ -18,7 +18,7 @@ contract ContetStore {
 
   function addContent (string _preview, string _main) private {
     previewContents[msg.sender] = _preview;
-    mainContents[msg.sender] = _main;
+    mainContents[msg.sender] = _main; 
     // TODO: fire event
   }
 
@@ -28,6 +28,4 @@ contract ContetStore {
       return mainContents[_owner];
     }
   }
-
-
 }
