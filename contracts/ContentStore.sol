@@ -13,12 +13,12 @@ contract ContentStore {
       "QmX4U7jwgYfM6EzMt3SiiEL24EcSBLc9hKWSwnqqb19phR"
       );
 
-      price = _price;
+      price = _price; 
   }
 
   function addContent (string _preview, string _main) private {
     previewContents[msg.sender] = _preview;
-    mainContents[msg.sender] = _main; 
+    mainContents[msg.sender] = _main;
     // TODO: fire event
   }
 
@@ -28,4 +28,13 @@ contract ContentStore {
       return mainContents[_owner];
     }
   }
+
+  function withdraw () {
+    uint value = funds[msg.sender];
+    if (value > 0) {
+      funds[msg.sender] = 0;
+      msg.sender.transfer(value);
+    }
+  }
+
 }
