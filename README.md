@@ -1,12 +1,13 @@
-## Install thing
-
+## install thing
 `npm i`
 
-## Start the app
+## start the mock server
+
+`node server.js`
+
+## start the app
 
 `npm start`
-
-now go to http://127.0.0.1:3000
 
 ## Deploy contract
 
