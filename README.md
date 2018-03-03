@@ -8,3 +8,7 @@
 ## start the app
 
 `npm start`
+
+## Deploy contract
+
+`truffle compile && truffle migrate --reset`
